@@ -1,5 +1,8 @@
 # Chainable half-digit controller
 
+## Requirements
+
+Files inside `3d_models` folder must be copied into `<kicad dir>\share\kicad\modules\packages3d`
 
 ## Resources
 
