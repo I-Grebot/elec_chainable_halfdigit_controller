@@ -84,8 +84,6 @@ NoConn ~ 4050 4300
 NoConn ~ 4050 4200
 NoConn ~ 4050 4100
 NoConn ~ 4050 4000
-NoConn ~ 4050 3900
-NoConn ~ 4050 3800
 NoConn ~ 4050 3550
 NoConn ~ 4050 3250
 NoConn ~ 4050 3150
@@ -176,18 +174,43 @@ Text GLabel 6300 2900 2    60   Input ~ 0
 CE
 Text GLabel 6300 2600 2    60   Input ~ 0
 CSN
-Text GLabel 6300 2750 2    60   Input ~ 0
-IRQ
 Text GLabel 5250 2900 0    60   Input ~ 0
 SCK
 Text GLabel 5250 2750 0    60   Input ~ 0
 MOSI
 Text GLabel 5250 2600 0    60   Input ~ 0
 MISO
+NoConn ~ 2650 4700
+$Comp
+L Conn_01x06 J2
+U 1 1 5A1DE956
+P 6750 4850
+F 0 "J2" H 6750 5150 50  0000 C CNN
+F 1 "Conn_01x06" H 6750 4450 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Angled_1x06_Pitch2.54mm" H 6750 4850 50  0001 C CNN
+F 3 "" H 6750 4850 50  0001 C CNN
+	1    6750 4850
+	1    0    0    -1  
+$EndComp
+Text GLabel 6200 5150 0    60   Input ~ 0
+BL_RXD
+Text GLabel 6200 5000 0    60   Input ~ 0
+BL_TXD
+Text GLabel 6200 4700 0    60   Input ~ 0
+3V3
+Text GLabel 6200 4850 0    60   Input ~ 0
+GND
+Text GLabel 4250 3900 2    60   Input ~ 0
+BL_TXD
+Text GLabel 4250 3800 2    60   Input ~ 0
+BL_RXD
+NoConn ~ 6550 4650
+NoConn ~ 6550 5150
+NoConn ~ 6150 2750
 Wire Wire Line
 	7050 3850 7400 3850
 Wire Wire Line
-	7200 3850 7200 3700
+	7200 3700 7200 4100
 Wire Wire Line
 	7300 3850 7300 3700
 Wire Wire Line
@@ -201,16 +224,12 @@ Connection ~ 7950 3100
 Connection ~ 7200 3850
 Connection ~ 7300 3850
 Wire Wire Line
-	3350 5200 3350 5050
-Wire Wire Line
 	3200 2150 3200 2350
 Wire Wire Line
 	3500 2350 3500 2150
 Wire Wire Line
 	3650 2250 3500 2250
 Connection ~ 3500 2250
-Wire Wire Line
-	4200 2850 4050 2850
 Wire Wire Line
 	4050 2950 4200 2950
 Wire Wire Line
@@ -241,9 +260,45 @@ Wire Wire Line
 	5750 2250 5750 2400
 Wire Wire Line
 	5750 3250 5750 3100
-NoConn ~ 2650 4700
 Connection ~ 7050 3850
 Connection ~ 3650 2250
 Wire Wire Line
-	6300 2750 6150 2750
+	6550 4850 6200 4850
+Wire Wire Line
+	6550 4750 6350 4750
+Wire Wire Line
+	6350 4750 6350 4700
+Wire Wire Line
+	6350 4700 6200 4700
+Wire Wire Line
+	6550 4950 6350 4950
+Wire Wire Line
+	6350 4950 6350 5000
+Wire Wire Line
+	6350 5000 6200 5000
+Wire Wire Line
+	6550 5050 6400 5050
+Wire Wire Line
+	6400 5050 6400 5150
+Wire Wire Line
+	6400 5150 6200 5150
+Wire Wire Line
+	4250 3800 4050 3800
+Wire Wire Line
+	4250 3900 4050 3900
+Wire Wire Line
+	4050 2850 4200 2850
+Wire Wire Line
+	3350 5200 3350 5050
+$Comp
+L PWR_FLAG #FLG05
+U 1 1 5A1DFFDB
+P 7200 4100
+F 0 "#FLG05" H 7200 4175 50  0001 C CNN
+F 1 "PWR_FLAG" H 7200 4250 50  0000 C CNN
+F 2 "" H 7200 4100 50  0001 C CNN
+F 3 "" H 7200 4100 50  0001 C CNN
+	1    7200 4100
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
