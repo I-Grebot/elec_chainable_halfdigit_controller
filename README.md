@@ -1,5 +1,7 @@
 # Chainable half-digit controller
 
+![Schematic](./images/chainable_halfdigit_controller.sch.svg)
+
 ## Requirements
 
 Files inside `3d_models` folder must be copied into `<kicad dir>\share\kicad\modules\packages3d`
