@@ -1,6 +1,6 @@
 # Chainable half-digit controller
 
-![Schematic](./images/chainable_halfdigit_controller.sch.svg)
+![Schematic](./elec/images/chainable_halfdigit_controller.sch.svg)
 
 ## Requirements
 
