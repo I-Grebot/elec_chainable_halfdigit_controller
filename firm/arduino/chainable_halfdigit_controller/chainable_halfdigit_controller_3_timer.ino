@@ -13,8 +13,15 @@ void rainbowCycleWithTimer(unsigned char frames, unsigned int frameAdvance, unsi
     unsigned int currentPixelHue = firstPixelHue;
 
     new_time = millis();
-    diff_time = (new_time - old_time) / 10;
+    diff_time = (new_time - old_time) / 1000;
 
+    int sizeDigit = 23*2;
+    
+    char result[ARRAY_SIZE];
+    
+    fillArrayWithZero(result, ARRAY_SIZE);
+    computeDigits(result, diff_time, 0);
+      
     cli();
 
     for(unsigned int i=0; i< PIXELS; i++) {
@@ -24,13 +31,6 @@ void rainbowCycleWithTimer(unsigned char frames, unsigned int frameAdvance, unsi
 
       unsigned char phase = currentPixelHue >> 8;
       unsigned char step = currentPixelHue & 0xff;
-
-      int sizeDigit = 23*2;
-      
-      char result[ARRAY_SIZE];
-      
-      fillArrayWithZero(result, ARRAY_SIZE);
-      computeDigits(result, diff_time, 0);
 
       /*
       for (int i = 0; i < ARRAY_SIZE; i++)
@@ -69,9 +69,9 @@ void rainbowCycleWithTimer(unsigned char frames, unsigned int frameAdvance, unsi
         sendPixel(0,0,0);
       }
 
-      currentPixelHue+=pixelAdvance;                                      
+      currentPixelHue+=pixelAdvance;
       //*/
-    } 
+    }
 
     sei();
 
