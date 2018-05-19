@@ -3,7 +3,7 @@ void readBluetooth() {
   {
     str = bluetoothSerial.readStringUntil('\n');
     str.remove(0, 1);
-    if(str.startsWith("[MATCH] RUN ") || str.startsWith("[MATCH] READY ")){
+    if(str.startsWith("[MATCH] RUN ") || str.startsWith("[MATCH] READY ") || str.startsWith("[MATCH] ")){
       str.remove(0, 55);
       score = str.toInt();
     }

@@ -21,6 +21,8 @@ void setup() {
   old_time = millis() - 200000;
 
   ledsetup();
+
+  score = 157;
 }
 
 void loop() {
